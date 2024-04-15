@@ -1,0 +1,119 @@
+body {
+  height: 1000px;
+  background-color: grey;
+  background-image: linear-gradient(grey, darkorange);
+}
+
+.header {
+  color: lightgrey;
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem;
+}
+
+.formTitle {
+  color: lightgrey;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.emailContainer {
+  margin-top: 1.2rem;
+  border: 3px solid black;
+  border-bottom: none;
+}
+
+.passwordContainer {
+  margin-top: -1rem;
+  margin-bottom: 1.2rem;
+  border: 3px solid black;
+  border-top: none;
+}
+
+.email {
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.emailInput {
+  background-color: lightgrey;
+  margin-top: 0.2rem;
+  margin: 1.2rem;
+  padding: 0;
+}
+
+.password {
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
+}
+
+.passwordInput {
+  background-color: lightgrey;
+  padding: 0;
+  margin-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+input::placeholder {
+  padding-left: 0.5rem;
+}
+
+.submit {
+  color: black;
+  margin: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.googleSignIn {
+  margin: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.submitButton {
+  margin-right: 0.5rem;
+}
+
+button {
+  background-color: grey;
+  color: black;
+  border: 2px solid dodgerblue;
+}
+
+button:hover {
+  background-color: dodgerblue;
+}
+
+.btn {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: lightgrey;
+  border: 3px solid;
+  border-radius: 5px;
+  height: 5rem;
+}
+
+.navHeader {
+  padding-left: 1rem;
+}
+
+.login {
+  display: grid;
+  font-size: 18px;
+  justify-content: center;
+  padding-right: 1rem;
+}
