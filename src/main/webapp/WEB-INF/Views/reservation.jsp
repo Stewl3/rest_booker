@@ -17,64 +17,137 @@
     ></script>
   </head>
   <style>
-    /* * {
-      border: 1px solid red;
-    } */
+    html {
+      height: 100%;
+    }
 
     body {
-      height: 1000px;
+      height: 100%;
       background-color: grey;
       background-image: linear-gradient(grey, darkorange);
     }
 
-    .container {
+    h2 {
+      margin-top: 5rem;
+    }
+
+    .buttonSubmit {
+      padding-left: 3rem;
+    }
+
+    .submitBtn {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    .formContainer {
       display: grid;
       justify-content: center;
       font-size: 1.2rem;
     }
 
     .login {
+      width: fit-content;
       display: grid;
       font-size: 18px;
       justify-content: center;
-      padding-right: 1rem;
+      border: 3px solid black;
+      padding: 1rem;
     }
+
     .submit {
       color: black;
       margin: 0;
       font-size: 1.2rem;
       cursor: pointer;
     }
+
     .header {
       display: grid;
-      font-size: 18px;
+      font-size: 20px;
       justify-content: center;
-      padding-right: 1rem;
+      padding-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .nav {
+      background-color: orange;
+      display: flex;
+      border-radius: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 1rem;
+      align-items: center;
+      box-shadow: 5px 5px;
+    }
+
+    .navList {
+      width: 100%;
+      margin: 0;
+      text-align: end;
+    }
+
+    .navItem {
+      padding: 0.5rem 2rem;
+      border-bottom: 1px solid #222;
+    }
+
+    .navItem > a {
+      color: #d2d0db;
+      transition: color 0.3s;
+    }
+
+    .navItem > a:hover {
+      color: white;
+    }
+
+    .navToggler {
+      opacity: 0.5;
+      transition: box-shadow 0.15s;
+      cursor: pointer;
+    }
+
+    .navBrand {
+      transform: translateY(5px);
     }
   </style>
   <body>
+    <nav class="nav collapsible">
+      <a class="navBrand" href="/"
+        ><img src="../Views/images/Honeypot_logo.webp" alt="Honeypot Logo"
+      /></a>
+      <uli class="list navList collapsibleContent">
+        <button class="btn" href="/login">Login Here</button>
+        <button class="btn" href="/">Register Here</button>
+        <button class="btn" href="/">About Us</button>
+      </uli>
+    </nav>
     <header class="header">
       <h2>Reservation Form</h2>
     </header>
-    <form action="/submit-form" method="post" class="login">
-      <div>
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" /><br /><br />
-
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname" /><br /><br />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" /><br /><br />
-
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" /><br /><br />
-
-        <label for="time">Time:</label>
-        <input type="time" id="time" name="time" /><br /><br />
-
-        <input type="submit" value="Submit" class="submit" />
-      </div>
-    </form>
+    <div class="formContainer">
+      <form action="/user/success" method="post" class="login">
+        <div>
+          <label for="firstName">First Name:</label>
+          <input type="text" id="fname" name="firstName" /><br /><br />
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lname" name="lastName" /><br /><br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br /><br />
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" /><br /><br />
+          <label for="time">Time:</label>
+          <input type="time" id="time" name="time" /><br /><br />
+          <div class="buttonSubmit">
+            <button
+              type="button submit"
+              class="btn submitBtn btn-outline-secondary"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

@@ -93,12 +93,12 @@ button:hover {
   background-color: dodgerblue;
 }
 
-.btn {
+/* .btn {
   margin-top: 1.2rem;
   display: flex;
   justify-content: center;
   cursor: pointer;
-}
+} */
 
 .navbar {
   background-color: lightgrey;

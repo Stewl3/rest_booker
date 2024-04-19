@@ -17,19 +17,22 @@
     ></script>
   </head>
   <style>
+    /* * {
+      border: 1px solid red;
+    } */
+
+    html {
+      height: 100%;
+    }
+
     body {
-      height: 800px;
-      width: 1519px;
-      background-color: grey;
+      height: 100%;
       background-image: linear-gradient(grey, darkorange);
     }
 
-    .rec {
-      margin-top: 15px;
-      background-color: darkgrey;
-      width: 1519px;
-      display: grid;
-      justify-content: center;
+    h2 {
+      margin-top: 2rem;
+      font-size: 25px;
     }
 
     .container {
@@ -38,33 +41,106 @@
       font-size: 1.2rem;
     }
 
+    .header {
+      margin-top: 2rem;
+      font-style: italic;
+    }
+
     .login {
       display: grid;
       font-size: 25px;
       justify-content: center;
       padding-right: 1rem;
       margin-top: 20px;
+      font-style: italic;
     }
 
-    .imageContainer {
+    .honeyPotLogo {
+      margin-top: 8rem;
+    }
+
+    .nav {
+      background-color: orange;
       display: flex;
-      justify-content: center;
+      border-radius: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 1rem;
+      align-items: center;
+      box-shadow: 5px 5px;
     }
 
-    #image1 {
-      padding-right: 500px;
+    .navList {
+      width: 100%;
+      margin: 0;
+      text-align: end;
+    }
+
+    .navItem {
+      padding: 0.5rem 2rem;
+      border-bottom: 1px solid #222;
+    }
+
+    .navItem > a {
+      color: #d2d0db;
+      transition: color 0.3s;
+    }
+
+    .navItem > a:hover {
+      color: white;
+    }
+
+    .navToggler {
+      opacity: 0.5;
+      transition: box-shadow 0.15s;
+      cursor: pointer;
+    }
+
+    .navBrand {
+      transform: translateY(5px);
     }
   </style>
   <body>
-    <div class="container">
-      <div class="rec">
-        <h1>Welcome to Honey Pot Restaurant!!</h1>
+    <nav class="nav collapsible">
+      <a class="navBrand" href="/"
+        ><img src="../Views/images/Honeypot_logo.webp" alt="Honeypot Logo"
+      /></a>
+      <uli class="list navList collapsibleContent">
+        <button class="btn" href="/">Register Here</button>
+        <button class="btn" href="/">About Us</button>
+      </uli>
+    </nav>
+    <div class="container text-center">
+      <div class="row row-cols-2">
+        <div class="col">
+          <header class="header">
+            <h1>Welcome to Honey Pot Restaurant!!</h1>
+            <h2>Login To Continue:</h2>
+          </header>
+        </div>
+        <div class="col"></div>
+        <div class="col">
+          <form class="login" method="post" action="/login/user">
+            Email : <input type="text" name="name" />
+            <br />
+            Password : <input type="password" name="password" />
+            <br />
+            <button
+              type="button submit"
+              class="btn submitBtn btn-outline-secondary"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <div class="col">
+          <img
+            class="img-fluid honeyPotLogo"
+            src="Images/Honeypot_logo.webp"
+            alt="Honeypot image"
+          />
+        </div>
       </div>
-      <a class="login" href="/login">Login to make a reservation</a>
-    </div>
-    <div class="imageContainer">
-      <img id="image1" src="Images/Honeypot_logo.webp" alt="" />
-      <img id="image2" src="Images/Honeypot_logo.webp" alt="" />
     </div>
   </body>
 </html>

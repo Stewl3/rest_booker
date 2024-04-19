@@ -102,7 +102,7 @@ public class BasicDAOImpl implements BasicDAO {
 
     public Reservation saveReservation(Reservation reservation) {
         try (PreparedStatement statement = startConnection().prepareStatement(
-                "Insert into bookings (ClientFirstName, ClientLastName, bookingDate, bookingTime) Values (?,?,?,?)")) {
+                "Insert into bookings (ClientFirstName, ClientLastName, ClientEmail, bookingDate, bookingTime) Values (?,?,?,?)")) {
             statement.setString(1, reservation.getFirstName());
             statement.setString(2, reservation.getLastName());
             statement.setString(3, reservation.getDate());
