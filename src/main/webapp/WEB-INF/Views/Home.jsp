@@ -103,7 +103,10 @@
   <body>
     <nav class="nav collapsible">
       <a class="navBrand" href="/"
-        ><img src="../Views/images/Honeypot_logo.webp" alt="Honeypot Logo"
+        ><img
+          src="../../../resources/Images/Honeypot_logo.png"
+          alt="Honeypot
+        Logo"
       /></a>
       <uli class="list navList collapsibleContent">
         <button class="btn" href="/">Register Here</button>
@@ -136,7 +139,7 @@
         <div class="col">
           <img
             class="img-fluid honeyPotLogo"
-            src="Images/Honeypot_logo.webp"
+            src="../../../resources/Images/Honeypot_logo.png"
             alt="Honeypot image"
           />
         </div>
