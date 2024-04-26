@@ -15,6 +15,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <jsp:include page="navbar.jsp" />
   </head>
   <style>
     /* * {
@@ -51,68 +53,12 @@
       font-size: 25px;
       justify-content: center;
       padding-right: 1rem;
-      margin-top: 20px;
       font-style: italic;
     }
 
-    .honeyPotLogo {
-      margin-top: 8rem;
-    }
-
-    .nav {
-      background-color: orange;
-      display: flex;
-      border-radius: 20px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 0 1rem;
-      align-items: center;
-      box-shadow: 5px 5px;
-    }
-
-    .navList {
-      width: 100%;
-      margin: 0;
-      text-align: end;
-    }
-
-    .navItem {
-      padding: 0.5rem 2rem;
-      border-bottom: 1px solid #222;
-    }
-
-    .navItem > a {
-      color: #d2d0db;
-      transition: color 0.3s;
-    }
-
-    .navItem > a:hover {
-      color: white;
-    }
-
-    .navToggler {
-      opacity: 0.5;
-      transition: box-shadow 0.15s;
-      cursor: pointer;
-    }
-
-    .navBrand {
-      transform: translateY(5px);
-    }
+   
   </style>
   <body>
-    <nav class="nav collapsible">
-      <a class="navBrand" href="/"
-        ><img
-          src="../../../resources/Images/Honeypot_logo.png"
-          alt="Honeypot
-        Logo"
-      /></a>
-      <uli class="list navList collapsibleContent">
-        <button class="btn" href="/">Register Here</button>
-        <button class="btn" href="/">About Us</button>
-      </uli>
-    </nav>
     <div class="container text-center">
       <div class="row row-cols-2">
         <div class="col">
@@ -122,24 +68,22 @@
           </header>
         </div>
         <div class="col"></div>
-        <div class="col">
-          <form class="login" method="post" action="/login/user">
-            Email : <input type="text" name="name" />
-            <br />
-            Password : <input type="password" name="password" />
-            <br />
-            <button
-              type="button submit"
-              class="btn submitBtn btn-outline-secondary"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
+        <form class="login" method="post" action="/login/user">
+          Email : <input class="emailInput" type="text" name="name" />
+          <br />
+          Password : <input class="pwInput" type="password" name="password" />
+          <br />
+          <button
+            type="button submit"
+            class="btn submitBtn btn-outline-secondary submitBtn"
+          >
+            Submit
+          </button>
+        </form>
         <div class="col">
           <img
             class="img-fluid honeyPotLogo"
-            src="../../../resources/Images/Honeypot_logo.png"
+            src="../Views/Images/Honeypot_logo.png"
             alt="Honeypot image"
           />
         </div>

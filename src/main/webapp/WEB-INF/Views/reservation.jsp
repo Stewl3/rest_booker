@@ -15,6 +15,8 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <jsp:include page="navbar.jsp" />
   </head>
   <style>
     html {
@@ -69,59 +71,8 @@
       padding-bottom: 1rem;
       font-style: italic;
     }
-
-    .nav {
-      background-color: orange;
-      display: flex;
-      border-radius: 20px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 0 1rem;
-      align-items: center;
-      box-shadow: 5px 5px;
-    }
-
-    .navList {
-      width: 100%;
-      margin: 0;
-      text-align: end;
-    }
-
-    .navItem {
-      padding: 0.5rem 2rem;
-      border-bottom: 1px solid #222;
-    }
-
-    .navItem > a {
-      color: #d2d0db;
-      transition: color 0.3s;
-    }
-
-    .navItem > a:hover {
-      color: white;
-    }
-
-    .navToggler {
-      opacity: 0.5;
-      transition: box-shadow 0.15s;
-      cursor: pointer;
-    }
-
-    .navBrand {
-      transform: translateY(5px);
-    }
   </style>
   <body>
-    <nav class="nav collapsible">
-      <a class="navBrand" href="/"
-        ><img src="../Views/images/Honeypot_logo.webp" alt="Honeypot Logo"
-      /></a>
-      <uli class="list navList collapsibleContent">
-        <button class="btn" href="/login">Login Here</button>
-        <button class="btn" href="/">Register Here</button>
-        <button class="btn" href="/">About Us</button>
-      </uli>
-    </nav>
     <header class="header">
       <h2>Reservation Form</h2>
     </header>
