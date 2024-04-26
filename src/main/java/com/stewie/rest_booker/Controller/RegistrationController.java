@@ -7,17 +7,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.stewie.rest_booker.DAO.BasicDAO;
+
 @Controller
 @RequestMapping(value = { "/user" })
-public class SuccessController {
+public class RegistrationController { 
 
     @Autowired
     BasicDAO dao;
 
-    @RequestMapping(value = { "/success" }, method = RequestMethod.POST)
-    public ModelAndView successView() {
+    @RequestMapping(value = { "/registration" }, method = RequestMethod.GET)
+    public ModelAndView registrationView() {
         ModelAndView model = new ModelAndView();
-        model.setViewName("success");
+        model.setViewName("registration");
         return model;
     }
+
+    
 }

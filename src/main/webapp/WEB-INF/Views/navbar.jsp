@@ -6,6 +6,10 @@
     <title>Document</title>
   </head>
   <style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
     .nav {
       background-color: orange;
       display: flex;
@@ -85,7 +89,9 @@
       <div class="title"></div>
 
       <uli class="list navList collapsibleContent">
-        <button class="btn" href="/">Register Here</button>
+        <button class="btn">
+          <a type="button submit" href="/user/registration">Register here</a>
+        </button>
         <button class="btn">View Profile</button>
         <button class="btn" href="/">About Us</button>
       </uli>

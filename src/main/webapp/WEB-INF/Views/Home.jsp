@@ -55,8 +55,6 @@
       padding-right: 1rem;
       font-style: italic;
     }
-
-   
   </style>
   <body>
     <div class="container text-center">
