@@ -1,14 +1,15 @@
 package com.stewie.rest_booker.DAO;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class User {
-    
+
     private int userID;
     private String userFirstName;
     private String userLastName;
     private String userEmail;
     private String userPassword;
-
-    
 
     public String getUserFirstName() {
         return userFirstName;

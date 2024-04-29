@@ -44,13 +44,13 @@
               <h3 class="text-center">Create your profile here</h3>
             </div>
             <div class="card-body">
-              <form>
+              <form method="post" action="/registration/registered">
                 <div class="mb-3">
                   <label for="first_name" class="form-label">First Name</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="first_name"
+                    name="first_name"
                     required
                   />
                 </div>
@@ -59,7 +59,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="last_name"
+                    name="last_name"
                     required
                   />
                 </div>
@@ -68,7 +68,7 @@
                   <input
                     type="email"
                     class="form-control"
-                    id="email"
+                    name="email"
                     required
                   />
                 </div>
@@ -77,7 +77,7 @@
                   <input
                     type="password"
                     class="form-control"
-                    id="password"
+                    name="password"
                     required
                   />
                 </div>
