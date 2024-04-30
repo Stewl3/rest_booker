@@ -66,6 +66,9 @@ public class BasicDAOImpl implements BasicDAO {
             statement.setString(2, user.getUserLastName());
             statement.setString(3, user.getUserEmail());
             statement.setString(4, user.getUserPassword());
+
+            statement.executeUpdate();
+
         } catch (Exception e) {
             System.out.println("Could not add user");
             e.printStackTrace();
