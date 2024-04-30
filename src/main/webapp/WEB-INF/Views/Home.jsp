@@ -51,12 +51,7 @@
       font-size: 25px;
       justify-content: center;
       padding-right: 1rem;
-      margin-top: 20px;
       font-style: italic;
-    }
-
-    .honeyPotLogo {
-      margin-top: 8rem;
     }
 
     .nav {
@@ -71,9 +66,10 @@
     }
 
     .navList {
-      width: 100%;
+      width: 50%;
       margin: 0;
       text-align: end;
+      font-size: 69px;
     }
 
     .navItem {
@@ -98,16 +94,44 @@
 
     .navBrand {
       transform: translateY(5px);
+      text-decoration: none;
+      font-size: 40px;
+      color: black;
+    }
+
+    .navbarImg {
+      height: 100px;
+      margin-top: -10px;
+    }
+
+    .honeyPotLogo {
+      height: 305px;
+    }
+
+    .emailInput {
+      padding: 0;
+    }
+
+    .pwInput {
+      padding: 0;
+    }
+
+    .submitBtn {
+      padding: 0;
     }
   </style>
   <body>
     <nav class="nav collapsible">
       <a class="navBrand" href="/"
         ><img
-          src="../../../resources/Images/Honeypot_logo.png"
-          alt="Honeypot
-        Logo"
-      /></a>
+          class="navbarImg"
+          src="../Views/Images/Honeypot_logo.png"
+          alt=""
+        />
+        Honey Pot Restaurant
+      </a>
+      <div class="title"></div>
+
       <uli class="list navList collapsibleContent">
         <button class="btn" href="/">Register Here</button>
         <button class="btn" href="/">About Us</button>
@@ -122,24 +146,22 @@
           </header>
         </div>
         <div class="col"></div>
-        <div class="col">
-          <form class="login" method="post" action="/login/user">
-            Email : <input type="text" name="name" />
-            <br />
-            Password : <input type="password" name="password" />
-            <br />
-            <button
-              type="button submit"
-              class="btn submitBtn btn-outline-secondary"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
+        <form class="login" method="post" action="/login/user">
+          Email : <input class="emailInput" type="text" name="name" />
+          <br />
+          Password : <input class="pwInput" type="password" name="password" />
+          <br />
+          <button
+            type="button submit"
+            class="btn submitBtn btn-outline-secondary submitBtn"
+          >
+            Submit
+          </button>
+        </form>
         <div class="col">
           <img
             class="img-fluid honeyPotLogo"
-            src="../../../resources/Images/Honeypot_logo.png"
+            src="../Views/Images/Honeypot_logo.png"
             alt="Honeypot image"
           />
         </div>
