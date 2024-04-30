@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.stewie.rest_booker.DAO.BasicDAO;
-
 @Controller
 @RequestMapping(value = { "/user" })
 public class SuccessController {
@@ -16,7 +15,7 @@ public class SuccessController {
     BasicDAO dao;
 
     @RequestMapping(value = { "/success" }, method = RequestMethod.POST)
-    public ModelAndView showSuccessPage() {
+    public ModelAndView successView() {
         ModelAndView model = new ModelAndView();
         model.setViewName("success");
         return model;

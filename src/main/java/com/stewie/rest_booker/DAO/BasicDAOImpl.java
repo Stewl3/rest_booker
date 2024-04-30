@@ -1,13 +1,18 @@
 package com.stewie.rest_booker.DAO;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 
-import java.sql.*;
+import org.springframework.stereotype.Service;
 
 import com.stewie.rest_booker.Database.DatabaseManager;
 import com.stewie.rest_booker.Model.Reservation;
 
+@Service
 public class BasicDAOImpl implements BasicDAO {
 
     public Connection startConnection() {
@@ -36,8 +41,8 @@ public class BasicDAOImpl implements BasicDAO {
     }
 
     @Override
-    public List<User> getAllUsers() {
-        List<User> users = new ArrayList<>();
+    public ArrayList<User> getAllUsers() {
+        ArrayList<User> users = new ArrayList<>();
 
         try (Statement statement = startConnection().createStatement()) {
             ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
@@ -56,12 +61,11 @@ public class BasicDAOImpl implements BasicDAO {
     public void addUser(User user) {
         try (PreparedStatement statement = startConnection()
                 .prepareStatement(
-                        "INSERT INTO users (ID, firstName, lastName, userEmail, userPassword) VALUES (?,?,?,?,?)")) {
-            statement.setInt(1, user.getUserID());
-            statement.setString(2, user.getUserFirstName());
-            statement.setString(3, user.getUserLastName());
-            statement.setString(4, user.getUserEmail());
-            statement.setString(5, user.getUserPassword());
+                        "INSERT INTO users (firstName, lastName, userEmail, userPassword) VALUES (?,?,?,?)")) {
+            statement.setString(1, user.getUserFirstName());
+            statement.setString(2, user.getUserLastName());
+            statement.setString(3, user.getUserEmail());
+            statement.setString(4, user.getUserPassword());
         } catch (Exception e) {
             System.out.println("Could not add user");
             e.printStackTrace();
