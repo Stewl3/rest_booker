@@ -95,8 +95,8 @@
         <button class="btn">
           <a type="button submit" href="/registration">Register here</a>
         </button>
-        <button class="btn">View Profile</button>
-        <button class="btn" href="/">About Us</button>
+        <button class="btn"><a href="/profile">View Profile</a></button>
+        <button class="btn"><a href="/about">About Us</a></button>
       </uli>
     </nav>
   </body>

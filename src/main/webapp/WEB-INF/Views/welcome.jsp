@@ -80,8 +80,10 @@
       </div>
       <div class="row">
         <div class="col reservationBtn">
-          <a href="" class="btn btn-outline-warning">Place Holder</a>
-          <a href="" class="btn btn-outline-warning">Place Holder</a>
+          <a href="/menu" class="btn btn-outline-warning">View our Menu</a>
+          <a href="/profile" class="btn btn-outline-warning"
+            >View your profile</a
+          >
         </div>
       </div>
     </div>
