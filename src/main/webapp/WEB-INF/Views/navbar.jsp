@@ -90,6 +90,9 @@
 
       <uli class="list navList collapsibleContent">
         <button class="btn">
+          <a type="submit" href="/menu">View our menu here</a>
+        </button>
+        <button class="btn">
           <a type="button submit" href="/registration">Register here</a>
         </button>
         <button class="btn">View Profile</button>

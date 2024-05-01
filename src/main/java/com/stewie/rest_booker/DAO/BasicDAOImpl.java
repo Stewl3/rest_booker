@@ -109,14 +109,16 @@ public class BasicDAOImpl implements BasicDAO {
 
     public Reservation saveReservation(Reservation reservation) {
         try (PreparedStatement statement = startConnection().prepareStatement(
-                "Insert into bookings (ClientFirstName, ClientLastName, ClientEmail, bookingDate, bookingTime) Values (?,?,?,?)")) {
+                "Insert into bookings (ClientFirstName, ClientLastName, ClientEmail, bookingDate, bookingTime) Values (?,?,?,?,?)")) {
             statement.setString(1, reservation.getFirstName());
             statement.setString(2, reservation.getLastName());
-            statement.setString(3, reservation.getDate());
-            statement.setString(4, reservation.getTime());
+            statement.setString(3, reservation.getEmail());
+            statement.setString(4, reservation.getDate());
+            statement.setString(5, reservation.getTime());
 
             statement.executeUpdate();
         } catch (Exception e) {
+            System.out.println("Could not add reservation");
             e.printStackTrace();
         }
         return null;

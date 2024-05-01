@@ -90,10 +90,7 @@
           <label for="time">Time:</label>
           <input type="time" id="time" name="time" /><br /><br />
           <div class="buttonSubmit">
-            <button
-              type="button submit"
-              class="btn submitBtn btn-outline-secondary"
-            >
+            <button type="submit" class="btn submitBtn btn-outline-secondary">
               Submit
             </button>
           </div>
