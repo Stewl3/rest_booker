@@ -10,94 +10,50 @@
       text-decoration: none;
       color: black;
     }
-    .nav {
+
+    .navbar {
       background-color: orange;
-      display: flex;
-      border-radius: 20px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 0 1rem;
-      align-items: center;
-      box-shadow: 5px 5px;
-    }
-
-    .navList {
-      width: 50%;
-      margin: 0;
-      text-align: end;
-      font-size: 69px;
-    }
-
-    .navItem {
-      padding: 0.5rem 2rem;
-      border-bottom: 1px solid #222;
-    }
-
-    .navItem > a {
-      color: #d2d0db;
-      transition: color 0.3s;
-    }
-
-    .navItem > a:hover {
-      color: white;
-    }
-
-    .navToggler {
-      opacity: 0.5;
-      transition: box-shadow 0.15s;
-      cursor: pointer;
-    }
-
-    .navBrand {
-      transform: translateY(5px);
-      text-decoration: none;
-      font-size: 40px;
-      color: black;
-    }
-
-    .navbarImg {
-      height: 100px;
-      margin-top: -10px;
-    }
-
-    .honeyPotLogo {
-      height: 305px;
-    }
-
-    .emailInput {
-      padding: 0;
-    }
-
-    .pwInput {
-      padding: 0;
-    }
-
-    .submitBtn {
-      padding: 0;
     }
   </style>
   <body>
-    <nav class="nav collapsible">
-      <a class="navBrand" href="/"
-        ><img
-          class="navbarImg"
-          src="../Views/Images/Honeypot_logo.png"
-          alt=""
-        />
-        Honey Pot Restaurant
-      </a>
-      <div class="title"></div>
-
-      <uli class="list navList collapsibleContent">
-        <button class="btn">
-          <a type="submit" href="/menu">View our menu here</a>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Honey Pot Restaurant</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <button class="btn">
-          <a type="button submit" href="/registration">Register here</a>
-        </button>
-        <button class="btn"><a href="/profile">View Profile</a></button>
-        <button class="btn"><a href="/about">About Us</a></button>
-      </uli>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/menu"
+                >Our Menu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/registration">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/reservation"
+                >Make a Reservation Here</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </body>
 </html>

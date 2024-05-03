@@ -50,39 +50,29 @@
 
     .login {
       display: grid;
+      margin-top: 3rem;
       font-size: 25px;
       justify-content: center;
       padding-right: 1rem;
       font-style: italic;
     }
-
-    .honeyPotLogo {
-      height: 305px;
-    }
   </style>
   <body>
     <div class="container text-center">
-      <div class="row row-cols-2">
-        <div class="col">
-          <header class="header">
-            <h1>Welcome to Honey Pot Restaurant!!</h1>
-            <h2>Login To Continue:</h2>
-          </header>
-        </div>
-        <div class="col"></div>
-        <div class="col">
-          <button type="button" class="btn btn-secondary">
-            <a href="/login">Login Here</a>
+      <center>
+        <form class="login" method="post" action="/login/user">
+          Email : <input class="emailInput" type="text" name="name" />
+          <br />
+          Password : <input class="pwInput" type="password" name="password" />
+          <br />
+          <button
+            type="button submit"
+            class="btn submitBtn btn-outline-secondary submitBtn"
+          >
+            Submit
           </button>
-        </div>
-        <div class="col">
-          <img
-            class="img-fluid honeyPotLogo"
-            src="../Views/Images/Honeypot_logo.png"
-            alt="Honeypot image"
-          />
-        </div>
-      </div>
+        </form>
+      </center>
     </div>
   </body>
 </html>
