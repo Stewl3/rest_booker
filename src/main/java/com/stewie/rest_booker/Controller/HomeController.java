@@ -33,7 +33,8 @@ public class HomeController {
     @GetMapping("Views/Images/Honeypot_logo.png")
     public void imgHandler(HttpServletResponse response) {
         try {
-            InputStream stream = new FileInputStream("G:/Code/rest_booker/src/main/webapp/WEB-INF/Views/Images/Honeypot_logo.png");
+            InputStream stream = new FileInputStream(
+                    "G:/Code/Honey Pot Restaurant(Side Project)/src/main/webapp/WEB-INF/Views/Images/Honeypot_logo.png");
             response.setContentType(MediaType.IMAGE_JPEG_VALUE);
             StreamUtils.copy(stream, response.getOutputStream());
 

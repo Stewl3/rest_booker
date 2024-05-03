@@ -34,8 +34,6 @@
     }
 
     .honeyPotMenu {
-      display: flex;
-      align-items: center;
       margin-bottom: 5rem;
     }
   </style>

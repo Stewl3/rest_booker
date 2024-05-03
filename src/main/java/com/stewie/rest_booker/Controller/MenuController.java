@@ -27,7 +27,7 @@ public class MenuController {
     public void menuImg(HttpServletResponse response) {
         try {
             InputStream stream = new FileInputStream(
-                    "G:/Code/rest_booker/src/main/webapp/WEB-INF/Views/Images/Menu.jpg");
+                    "G:/Code/Honey Pot Restaurant(Side Project)/src/main/webapp/WEB-INF/Views/Images/Menu.jpg");
             response.setContentType(MediaType.IMAGE_JPEG_VALUE);
             StreamUtils.copy(stream, response.getOutputStream());
         } catch (Exception e) {
