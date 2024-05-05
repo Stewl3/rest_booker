@@ -23,14 +23,12 @@ public class ViewProfileController {
         ModelAndView model = new ModelAndView();
         model.setViewName("profile");
 
-        // Retrieve the user's name and email from the session or database
         String userFirstName = (String) session.getAttribute("userFirstName");
         String userLastName = (String) session.getAttribute("userLastName");
         String userEmail = (String) session.getAttribute("userEmail");
 
         System.out.println(userFirstName + " " + userLastName + " " + userEmail);
 
-        // Pass the user's name and email to the profile page
         model.addObject("userFirstName", userFirstName);
         model.addObject("userLastName", userLastName);
         model.addObject("userEmail", userEmail);
