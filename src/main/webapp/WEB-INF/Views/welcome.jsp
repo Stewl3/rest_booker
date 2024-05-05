@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <jsp:include page="navbar.jsp" />
+    <jsp:include page="navbarLoggedOut.jsp" />
   </head>
   <style>
     /* * {
@@ -64,7 +64,7 @@
   </style>
   <body>
     <div class="container text-center">
-      <h1 class="header">Welcome! Please Select One</h1>
+      <h1 class="header">Welcome!</h1>
       <div class="row">
         <div class="col reservationBtn">
           <a type="button submit" class="btn btn-secondary" href="/reservation">

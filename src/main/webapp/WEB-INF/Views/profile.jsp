@@ -16,7 +16,9 @@
       crossorigin="anonymous"
     ></script>
 
-    <jsp:include page="navbar.jsp" />
+    <jsp:include page="navbarLoggedOut.jsp" />
+
+    <script type="text/JavaScript"></script>
   </head>
   <style>
     html {
@@ -34,5 +36,22 @@
   </style>
   <body>
     <h1 class="header">Profile Page</h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">User Information</h5>
+              <p class="card-text">
+                Name: ${userFirstName} ${userLastName}<br />
+                Email: ${userEmail}
+              </p>
+              <a href="#" class="btn btn-primary">Change Password</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

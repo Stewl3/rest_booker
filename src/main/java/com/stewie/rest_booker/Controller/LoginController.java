@@ -1,5 +1,7 @@
 package com.stewie.rest_booker.Controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,9 +29,10 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)
-    public String showWelcomePage(@RequestParam("name") String name, @RequestParam("password") String password) {
+    public String showWelcomePage(@RequestParam("name") String name, @RequestParam("password") String password,
+            HttpServletRequest request) {
         ModelAndView model = new ModelAndView();
-        boolean isValidUser = service.validateUser(name, password);
+        boolean isValidUser = service.validateUser(name, password, request);
 
         if (!isValidUser) {
             model.addObject("errorMessage", "Access Denied, Invalid credentials");

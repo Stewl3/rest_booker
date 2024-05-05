@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <jsp:include page="navbar.jsp" />
+    <jsp:include page="navbarLoggedOut.jsp" />
   </head>
   <style>
     html {
