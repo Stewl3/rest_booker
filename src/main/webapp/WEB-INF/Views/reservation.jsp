@@ -53,15 +53,7 @@
       display: grid;
       font-size: 18px;
       justify-content: center;
-      border: 3px solid black;
       padding: 1rem;
-    }
-
-    .submit {
-      color: black;
-      margin: 0;
-      font-size: 1.2rem;
-      cursor: pointer;
     }
 
     .header {
@@ -77,9 +69,54 @@
       <h2>Reservation Form</h2>
     </header>
     <div class="formContainer">
-      <form action="/user/success" method="post" class="login">
+      <form action="/reservation/success" method="post" class="login">
         <div>
-          <label for="firstName">First Name:</label>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >First name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              name="firstName"
+              placeholder="John"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Last Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              name="lastName"
+              placeholder="Smith"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Date</label
+            >
+            <input type="date" class="form-control" name="date" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Time</label
+            >
+            <input type="time" class="form-control" name="time" />
+          </div>
+          <!-- <label for="firstName">First Name:</label>
           <input type="text" id="fname" name="firstName" /><br /><br />
           <label for="lastName">Last Name:</label>
           <input type="text" id="lname" name="lastName" /><br /><br />
@@ -88,12 +125,9 @@
           <label for="date">Date:</label>
           <input type="date" id="date" name="date" /><br /><br />
           <label for="time">Time:</label>
-          <input type="time" id="time" name="time" /><br /><br />
+          <input type="time" id="time" name="time" /><br /><br /> -->
           <div class="buttonSubmit">
-            <button
-              type="button submit"
-              class="btn submitBtn btn-outline-secondary"
-            >
+            <button type="submit" class="btn submitBtn btn-outline-secondary">
               Submit
             </button>
           </div>

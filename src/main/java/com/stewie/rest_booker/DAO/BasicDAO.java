@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import com.stewie.rest_booker.Model.Reservation;
 
 public interface BasicDAO {
+    User getUserByEmail(String userEmail) throws Exception;
+    
+    User getUserByName(String userFirstName, String userLastName) throws Exception;
+
     User getUserByID(int userID) throws Exception;
 
     ArrayList<User> getAllUsers();

@@ -5,12 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class AboutController {
+public class WelcomeController {
 
-    @GetMapping("/about")
-    public ModelAndView aboutView() {
+    @GetMapping("/welcome")
+    public ModelAndView getWelcomePage() {
+
         ModelAndView model = new ModelAndView();
-        model.setViewName("about");
+        model.setViewName("welcome");
         return model;
     }
 

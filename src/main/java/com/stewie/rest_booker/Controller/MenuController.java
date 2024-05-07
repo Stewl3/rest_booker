@@ -3,43 +3,37 @@ package com.stewie.rest_booker.Controller;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping(value = { "/" })
-public class HomeController {
+public class MenuController {
 
-    @Autowired
-    ServletContext servletContext;
-
-    @GetMapping
-    public ModelAndView homeView() {
+    @GetMapping("/menu")
+    public ModelAndView menuView() {
         ModelAndView model = new ModelAndView();
 
-        model.setViewName("Home");
+        model.setViewName("menu");
 
         return model;
     }
 
-    @GetMapping("Views/Images/Honeypot_logo.png")
-    public void imgHandler(HttpServletResponse response) {
+    @GetMapping("/Views/Images/Menu.jpg")
+    public void menuImg(HttpServletResponse response) {
         try {
             InputStream stream = new FileInputStream(
-                    "G:/Code/Honey Pot Restaurant(Side Project)/src/main/webapp/WEB-INF/Views/Images/Honeypot_logo.png");
+                    "G:/Code/Honey Pot Restaurant(Side Project)/src/main/webapp/WEB-INF/Views/Images/Menu.jpg");
             response.setContentType(MediaType.IMAGE_JPEG_VALUE);
             StreamUtils.copy(stream, response.getOutputStream());
-
         } catch (Exception e) {
+            System.out.println("Could not display the image");
             e.printStackTrace();
         }
     }
+
 }

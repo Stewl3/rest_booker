@@ -6,14 +6,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.stewie.rest_booker.DAO.BasicDAO;
 import com.stewie.rest_booker.Model.Reservation;
 
 @Controller
-@RequestMapping(value = { "/user/reservation" })
+@RequestMapping(value = { "/reservation" })
+@SessionAttributes("firstName")
 public class ReservationController {
+
+    @Autowired
+    Reservation reservation;
 
     @Autowired
     BasicDAO dao;
@@ -25,7 +30,7 @@ public class ReservationController {
         return model;
     }
 
-    @RequestMapping(value = { "/success" }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/success" }, method = RequestMethod.POST)
     public ModelAndView ReservationView(
 
             @RequestParam("firstName") String firstName,
@@ -35,9 +40,9 @@ public class ReservationController {
             @RequestParam("time") String time) {
 
         ModelAndView model = new ModelAndView();
+
         model.setViewName("success");
 
-        Reservation reservation = new Reservation();
         reservation.setFirstName(firstName);
         reservation.setLastName(lastName);
         reservation.setEmail(email);
@@ -45,7 +50,8 @@ public class ReservationController {
         reservation.setTime(time);
 
         dao.saveReservation(reservation);
-        System.out.println("reservation saved to db");
+
         return model;
     }
+
 }

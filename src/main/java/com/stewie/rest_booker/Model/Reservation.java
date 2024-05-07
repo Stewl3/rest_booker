@@ -1,5 +1,8 @@
 package com.stewie.rest_booker.Model;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Reservation {
 
     private int id;

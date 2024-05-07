@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <jsp:include page="navbar.jsp" />
+    <jsp:include page="navbarLoggedOut.jsp" />
   </head>
   <style>
     /* * {
@@ -64,24 +64,19 @@
   </style>
   <body>
     <div class="container text-center">
-      <h1 class="header">Welcome user.</h1>
+      <h1 class="header">Welcome!</h1>
       <div class="row">
         <div class="col reservationBtn">
-          <a
-            type="button submit"
-            class="btn btn-outline-warning"
-            href="/user/reservation"
-          >
+          <a type="button submit" class="btn btn-secondary" href="/reservation">
             Make a Reservation here
           </a>
-
-          <a class="btn btn-outline-warning" href="">Find a Restaurant</a>
+          <a class="btn btn-secondary" href="">Find a Restaurant</a>
         </div>
       </div>
       <div class="row">
         <div class="col reservationBtn">
-          <a href="" class="btn btn-outline-warning">Place Holder</a>
-          <a href="" class="btn btn-outline-warning">Place Holder</a>
+          <a href="/menu" class="btn btn-secondary">View our Menu</a>
+          <a href="/profile" class="btn btn-secondary">View your profile</a>
         </div>
       </div>
     </div>

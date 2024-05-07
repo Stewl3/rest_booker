@@ -26,6 +26,40 @@ public class BasicDAOImpl implements BasicDAO {
     }
 
     @Override
+    public User getUserByName(String userFirstName, String userLastName) throws Exception {
+        try (PreparedStatement statement = startConnection()
+                .prepareStatement("SELCET * FROM users where firstName = ? and lastName = ?")) {
+            statement.setString(1, userFirstName);
+            statement.setString(2, userLastName);
+
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                return extractUserFromResultSet(resultSet);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public User getUserByEmail(String userEmail) throws Exception {
+        try (PreparedStatement statement = startConnection()
+                .prepareStatement("SELECT * FROM users WHERE userEmail = ?")) {
+            statement.setString(1, userEmail);
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                return extractUserFromResultSet(resultSet);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
     public User getUserByID(int userID) throws Exception {
         try (PreparedStatement statement = startConnection().prepareStatement("SELECT * FROM users WHERE ID = ?")) {
             statement.setInt(1, userID);
@@ -109,14 +143,16 @@ public class BasicDAOImpl implements BasicDAO {
 
     public Reservation saveReservation(Reservation reservation) {
         try (PreparedStatement statement = startConnection().prepareStatement(
-                "Insert into bookings (ClientFirstName, ClientLastName, ClientEmail, bookingDate, bookingTime) Values (?,?,?,?)")) {
+                "Insert into bookings (ClientFirstName, ClientLastName, ClientEmail, bookingDate, bookingTime) Values (?,?,?,?,?)")) {
             statement.setString(1, reservation.getFirstName());
             statement.setString(2, reservation.getLastName());
-            statement.setString(3, reservation.getDate());
-            statement.setString(4, reservation.getTime());
+            statement.setString(3, reservation.getEmail());
+            statement.setString(4, reservation.getDate());
+            statement.setString(5, reservation.getTime());
 
             statement.executeUpdate();
         } catch (Exception e) {
+            System.out.println("Could not add reservation");
             e.printStackTrace();
         }
         return null;
@@ -125,8 +161,11 @@ public class BasicDAOImpl implements BasicDAO {
     private User extractUserFromResultSet(ResultSet resultSet) throws SQLException {
         User user = new User();
         user.setUserID(resultSet.getInt("ID"));
-        user.setUserEmail("j.smith@email.com");
-        user.setUserPassword("Password123*");
+        user.setUserFirstName(resultSet.getString("firstName"));
+        user.setUserLastName(resultSet.getString("lastName"));
+        user.setUserEmail(resultSet.getString("userEmail"));
+        user.setUserPassword(resultSet.getString("userPassword"));
         return user;
     }
+
 }
