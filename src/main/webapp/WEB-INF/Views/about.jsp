@@ -25,22 +25,6 @@
 
     body {
       height: 100%;
-<<<<<<< HEAD
-      background: linear-gradient(grey, orange);
-    }
-  </style>
-  <body>
-    <div class="container">
-      <header>
-        <h1>About Us</h1>
-      </header>
-      <article>
-        <p>
-          We are a small town Restaurant in rural West Virginia set in the heart
-          of Buckhannon.
-        </p>
-      </article>
-=======
       background-image: linear-gradient(grey, darkorange);
     }
 
@@ -74,7 +58,6 @@
       <h2 class="header"><u>Contact Us</u></h2>
       <p>304-420-0690</p>
       <p>HoneyPotRestaurant@honey.pot</p>
->>>>>>> 5d7f4e2e28139fecb5b3cdf2eea93e7c8ec18eee
     </div>
   </body>
 </html>
